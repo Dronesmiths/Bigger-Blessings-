@@ -1119,6 +1119,7 @@ body {
     align-items: center;
     font-size: 17px;
     font-weight: 700;
+    color: var(--ink);
     cursor: pointer;
     font-family: inherit;
     text-align: left;
