@@ -7,6 +7,7 @@
     --cta-primary: #1f7a6b;
     --cta-primary-hover: #17665a;
     --shadow: 0 18px 46px rgba(0, 0, 0, .12);
+    --header-height: 85px;
 
     /* Rainbow Soft Palette */
     --p-pink: #ffd6e8;
@@ -57,6 +58,8 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 18px;
+    height: var(--header-height);
+    box-sizing: border-box;
 }
 
 /* Logo */
@@ -218,6 +221,15 @@ body {
     .bbp-hamburger {
         display: flex;
     }
+
+    .bbp-cta .bbp-phone,
+    .bbp-cta .bbp-enroll {
+        display: none;
+    }
+
+    .bbp-logo img {
+        max-height: 48px;
+    }
 }
 
 @media(max-width: 700px) {
@@ -263,6 +275,21 @@ body {
     max-width: 1120px;
     margin: 0 auto;
     padding: 110px 22px 100px;
+}
+
+@media(max-width: 768px) {
+    .bb-hero-wrap {
+        padding: 80px 22px 60px;
+        text-align: center;
+    }
+
+    .bb-hero-wrap h1 {
+        font-size: 36px !important;
+    }
+
+    .bb-hero-btns {
+        justify-content: center;
+    }
 }
 
 .bb-hero-kicker {
@@ -2735,7 +2762,7 @@ body {
 
     .slide-content h4 {
         font-size: 16px;
-        font-color: #fff;
+        color: #fff;
     }
 
     .slide-content p {
@@ -2747,6 +2774,16 @@ body {
         left: 50%;
         transform: translateX(-50%);
         right: auto;
+    }
+
+    .slide-content {
+        padding: 0 22px;
+        text-align: center;
+    }
+
+    .slide-content p {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -2978,5 +3015,59 @@ body {
 
     .bb-subsidy-card {
         padding: 30px;
+    }
+}
+/* =========================================
+   UNIVERSAL MOBILE HARDENING (SITEPIDE)
+   ========================================= */
+@media (max-width: 768px) {
+    section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+    
+    h1 { font-size: 34px !important; line-height: 1.1 !important; }
+    h2 { font-size: 28px !important; line-height: 1.2 !important; }
+    h3 { font-size: 22px !important; }
+    
+    .bbp-container {
+        height: 70px;
+    }
+    
+    .bbp-logo img {
+        max-height: 40px;
+    }
+
+    /* Fix for grids */
+    .bb-process-grid, 
+    .bb-trust-grid, 
+    .bb-program-age-grid, 
+    .bb-safety-grid, 
+    .bb-test-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Fix for flex layouts */
+    .bb-hero-btns, 
+    .bb-enroll-hero-btns, 
+    .bb-final-cta-btns,
+    .bb-contact-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    
+    .bb-btn, .bb-enroll-btn, .bb-enroll-hero-btns a, .bb-enroll-hero-btns button {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    /* Contact Page Adjustments */
+    .bb-contact-row {
+        gap: 40px !important;
+    }
+    
+    .bb-contact-hero-fw, .bb-about-hero-fw, .bb-programs-hero-fw, .bb-enroll-hero-fw {
+        padding: 80px 22px 60px !important;
     }
 }
