@@ -97,28 +97,57 @@
 
     <main>
         <!-- =========================================
-        BIGGER BLESSINGS — HERO (OPTIMIZED HOMEPAGE)
+        BIGGER BLESSINGS — HERO SLIDER (ANIMATED)
         ========================================= -->
-        <section class="bb-hero-fw" aria-label="Bigger Blessings Childcare and Preschool">
-            <img class="bb-hero-img" src="images/hero.webp" sizes="100vw"
-                alt="Bigger Blessings Childcare and Preschool classroom" fetchpriority="high" decoding="async">
-            <div class="bb-hero-wrap">
-                <div class="bb-hero-kicker">BIGGER BLESSINGS CHILDCARE & PRESCHOOL</div>
-                <h1>Trusted Childcare & Preschool Where Children Feel Safe — and Parents Feel Confident</h1>
-                <p class="bb-hero-desc">Bigger Blessings provides licensed childcare and preschool programs focused on
-                    structure, safety, and emotional growth — giving families peace of mind every single day.</p>
-                <div class="bb-hero-btns">
-                    <a class="bb-btn bb-btn-primary" href="/contact/">Schedule a Tour</a>
-                    <button class="bb-btn bb-btn-secondary" type="button"
-                        onclick="window.location.href='tel:6614889737';"
-                        aria-label="Call Bigger Blessings Childcare">Call 661-488-9737</button>
-                </div>
-                <div class="bb-hero-trust">
-                    <span>✓ California licensed childcare facility</span>
-                    <span>✓ Predictable daily routines</span>
-                    <span>✓ Clear parent communication</span>
+        <section id="bbpHeroSlider" aria-label="Bigger Blessings Childcare & Preschool Showcase">
+
+            <!-- Slide 1: General Quality -->
+            <div class="slide active" style="background-image:url('images/hero.webp');">
+                <div class="slide-content">
+                    <h4>Bigger Blessings Preschool</h4>
+                    <h1>Quality Child Care in Lancaster</h1>
+                    <p>Trusted early education for infants through school-age. Licensed for 84 children, serving
+                        families across Lancaster, Palmdale, and Quartz Hill.</p>
+                    <div class="slide-cta">
+                        <a href="/contact/" class="bb-btn bb-btn-primary">Enroll Now</a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Slide 2: Programs & Curriculum -->
+            <div class="slide" style="background-image:url('images/programs-classroom-grid.webp');">
+                <div class="slide-content">
+                    <h4>Learning Through Play</h4>
+                    <h1>Programs for Ages 0–13</h1>
+                    <p>We follow California Preschool Learning Foundations — children discover, explore, and grow
+                        through play in a safe, nurturing environment.</p>
+                    <div class="slide-cta">
+                        <a href="/programs/" class="bb-btn bb-btn-primary">Explore Programs</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Philosophy & Tour -->
+            <div class="slide" style="background-image:url('images/programs-curriculum.webp');">
+                <div class="slide-content">
+                    <h4>Family-Centered Care</h4>
+                    <h1>Building Bright Futures</h1>
+                    <p>Year-round childcare with full-time, part-time, and drop-in options. Meals provided, subsidy
+                        programs accepted, and every child welcomed.</p>
+                    <div class="slide-cta">
+                        <a href="/contact/" class="bb-btn bb-btn-primary">Schedule a Tour</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="arrow" onclick="showSlideBBP(currentSlideIndex - 1)"
+                    aria-label="Previous slide">❮</button>
+                <div id="sliderDotsBBP" class="slider-dots"></div>
+                <button class="arrow" onclick="showSlideBBP(currentSlideIndex + 1)" aria-label="Next slide">❯</button>
+            </div>
+
         </section>
 
         <!-- =========================================
