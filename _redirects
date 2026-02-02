@@ -1,0 +1,16 @@
+# Redirects for Bigger Blessings
+# Ensure clean URLs and handle potential legacy paths
+
+# Redirect index.html to root
+/index.html / 301
+
+# Canonical redirects for cleaner structure
+/about/index.html /about/ 301
+/programs/index.html /programs/ 301
+/enroll/index.html /enroll/ 301
+/contact/index.html /contact/ 301
+
+# Fallback for old WordPress paths (Optional, but safe)
+/category/* / 301
+/tag/* / 301
+/author/* / 301
