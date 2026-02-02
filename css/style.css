@@ -2721,3 +2721,224 @@ body {
     .slide-content p { font-size: 16px; }
     .slider-controls { bottom: 30px; left: 50%; transform: translateX(-50%); right: auto; }
 }
+
+/* =========================================
+   ENROLLMENT PAGE COMPONENTS
+   ========================================= */
+
+/* Enrollment Hero */
+.bb-enroll-hero-fw {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background: linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.97)), url("../images/hero.webp") center / cover no-repeat;
+    padding: 100px 22px;
+    text-align: center;
+}
+
+.bb-enroll-hero-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bb-enroll-hero-kicker {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    background: #eef3ff;
+    color: #333;
+    margin-bottom: 22px;
+}
+
+.bb-enroll-hero-wrap h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 24px;
+}
+
+.bb-enroll-hero-wrap p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 34px;
+}
+
+.bb-enroll-hero-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Process Section */
+.bb-process-fw {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background: #f8fbff;
+    padding: 100px 22px;
+}
+
+.bb-process-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bb-process-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.bb-process-kicker {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.bb-process-intro h2 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.bb-process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.bb-process-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.bb-process-card:hover {
+    transform: translateY(-5px);
+}
+
+.bb-process-num {
+    font-size: 60px;
+    font-weight: 900;
+    color: rgba(31, 122, 107, 0.08);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.bb-process-card h3 {
+    font-size: 22px;
+    margin-bottom: 14px;
+    color: var(--ink);
+    position: relative;
+    z-index: 2;
+}
+
+.bb-process-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+}
+
+/* Documentation & Subsidies */
+.bb-docs-fw {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background: #fff;
+    padding: 100px 22px;
+}
+
+.bb-docs-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.bb-docs-kicker {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.bb-docs-left h2 {
+    font-size: 42px;
+    margin-bottom: 24px;
+}
+
+.bb-docs-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+}
+
+.bb-docs-list li {
+    padding: 12px 0;
+    display: flex;
+    gap: 12px;
+    font-size: 17px;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.bb-docs-list li span {
+    color: var(--accent);
+}
+
+.bb-subsidy-card {
+    background: linear-gradient(135deg, #1f7a6b, #17665a);
+    padding: 50px;
+    border-radius: 34px;
+    color: #fff;
+    box-shadow: 0 20px 50px rgba(31, 122, 107, 0.2);
+}
+
+.bb-subsidy-card h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.bb-subsidy-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+}
+
+.bb-subsidy-list li {
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.bb-subsidy-note {
+    font-size: 14px;
+    opacity: 0.9;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+@media(max-width: 900px) {
+    .bb-enroll-hero-wrap h1 { font-size: 36px; }
+    .bb-docs-wrap { grid-template-columns: 1fr; gap: 40px; }
+    .bb-subsidy-card { padding: 30px; }
+}
