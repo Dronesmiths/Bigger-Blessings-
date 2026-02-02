@@ -2477,3 +2477,102 @@ body {
         font-size: 32px;
     }
 }
+
+/* =========================================
+   CONTACT PAGE COMPONENTS
+   ========================================= */
+
+/* Contact Hero */
+.bb-contact-hero-fw {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background: linear-gradient(rgba(255, 255, 255, .92), rgba(255, 255, 255, .96)), url("../images/about-classroom.webp") center / cover no-repeat;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+.bb-contact-hero-wrap {
+    max-width: 1200px;
+    margin: auto;
+    padding: 110px 22px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 56px;
+    align-items: flex-start;
+}
+
+.bb-contact-copy h1 {
+    font-size: 46px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    color: var(--ink);
+}
+
+.bb-contact-copy p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--muted);
+    max-width: 520px;
+}
+
+.bb-contact-trust {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #47525e;
+}
+
+.bb-contact-verify {
+    margin-top: 34px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px 24px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .08);
+    max-width: 520px;
+}
+
+.bb-contact-verify h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--ink);
+}
+
+.bb-contact-verify a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.bb-contact-verify a:hover {
+    text-decoration: underline;
+}
+
+.bb-contact-verify span {
+    display: block;
+    font-size: 14px;
+    color: #5f6b7a;
+    margin-top: 10px;
+}
+
+.bb-contact-form {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 36px;
+    box-shadow: 0 22px 52px rgba(0, 0, 0, .12);
+}
+
+@media(max-width:900px) {
+    .bb-contact-hero-wrap {
+        grid-template-columns: 1fr;
+        padding: 90px 22px;
+    }
+    .bb-contact-copy h1 {
+        font-size: 36px;
+    }
+}
