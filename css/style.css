@@ -366,7 +366,9 @@ body {
 .bb-trust-image img {
     width: 100%;
     max-width: 820px;
-    height: auto;
+    height: 500px;
+    /* Refined vertical space */
+    object-fit: cover;
     border-radius: 22px;
     box-shadow: var(--shadow);
 }
@@ -511,7 +513,9 @@ body {
 
 .bb-program-age-image img {
     width: 100%;
-    height: auto;
+    height: 550px;
+    /* Balanced height for preschool activity */
+    object-fit: cover;
     display: block;
 }
 
@@ -708,7 +712,8 @@ body {
 
 .bb-test-image img {
     width: 100%;
-    height: auto;
+    height: 550px;
+    object-fit: cover;
     border-radius: 28px;
     box-shadow: 0 22px 50px rgba(0, 0, 0, .10);
 }
@@ -888,9 +893,12 @@ body {
     height: 80px;
     border-radius: 20px;
     object-fit: cover;
-    object-position: 50% 10%;
+    object-position: top;
+    /* Standardized for portrait focus */
     border: 2px solid var(--border);
     background: #f5f7fb;
+    max-height: 80px;
+    /* Refinement */
 }
 
 .bb-team-name {
@@ -1213,6 +1221,32 @@ body {
     }
 }
 
+/* 📱 iPad & Tablet Refinements (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .bb-trust-image img,
+    .bb-program-age-image img,
+    .bb-test-image img,
+    .bb-about2-image img,
+    .bb-programs-diff-image img,
+    .bb-subsidy-image img {
+        height: 480px;
+        /* Consistently refined height for tablet */
+        object-position: center 20%;
+    }
+
+    .bb-team-avatar {
+        max-height: 280px;
+        object-fit: cover;
+    }
+
+    .bb-hero-wrap h1,
+    .bb-about-hero-wrap h1,
+    .bb-programs-hero-wrap h1 {
+        font-size: 48px;
+    }
+}
+
 /* Footer (Original Styles Extended) */
 .bb-footer {
     width: 100%;
@@ -1444,6 +1478,8 @@ body {
 .bb-about2-image img {
     width: 100%;
     max-width: 820px;
+    height: 500px;
+    object-fit: cover;
     border-radius: 26px;
     box-shadow: 0 22px 46px rgba(0, 0, 0, .12);
 }
@@ -2292,8 +2328,12 @@ body {
 
 .bb-programs-diff-image img {
     width: 100%;
-    height: auto;
+    max-width: 820px;
+    height: 500px;
+    /* Refined vertical space */
+    object-fit: cover;
     display: block;
+    margin: 0 auto;
 }
 
 .bb-programs-diff-kicker {
@@ -2416,8 +2456,12 @@ body {
 
 .bb-subsidy-image img {
     width: 100%;
-    height: auto;
+    max-width: 820px;
+    height: 500px;
+    /* Refined vertical space */
+    object-fit: cover;
     display: block;
+    margin: 0 auto;
 }
 
 .bb-subsidy-card {
@@ -3017,6 +3061,7 @@ body {
         padding: 30px;
     }
 }
+
 /* =========================================
    UNIVERSAL MOBILE HARDENING (SITEPIDE)
    ========================================= */
@@ -3025,39 +3070,52 @@ body {
         padding-top: 60px !important;
         padding-bottom: 60px !important;
     }
-    
-    h1 { font-size: 34px !important; line-height: 1.1 !important; }
-    h2 { font-size: 28px !important; line-height: 1.2 !important; }
-    h3 { font-size: 22px !important; }
-    
+
+    h1 {
+        font-size: 34px !important;
+        line-height: 1.1 !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+    }
+
+    h3 {
+        font-size: 22px !important;
+    }
+
     .bbp-container {
         height: 70px;
     }
-    
+
     .bbp-logo img {
         max-height: 40px;
     }
 
     /* Fix for grids */
-    .bb-process-grid, 
-    .bb-trust-grid, 
-    .bb-program-age-grid, 
-    .bb-safety-grid, 
+    .bb-process-grid,
+    .bb-trust-grid,
+    .bb-program-age-grid,
+    .bb-safety-grid,
     .bb-test-grid {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
     }
 
     /* Fix for flex layouts */
-    .bb-hero-btns, 
-    .bb-enroll-hero-btns, 
+    .bb-hero-btns,
+    .bb-enroll-hero-btns,
     .bb-final-cta-btns,
     .bb-contact-row {
         flex-direction: column !important;
         align-items: stretch !important;
     }
-    
-    .bb-btn, .bb-enroll-btn, .bb-enroll-hero-btns a, .bb-enroll-hero-btns button {
+
+    .bb-btn,
+    .bb-enroll-btn,
+    .bb-enroll-hero-btns a,
+    .bb-enroll-hero-btns button {
         width: 100% !important;
         text-align: center;
     }
@@ -3066,8 +3124,11 @@ body {
     .bb-contact-row {
         gap: 40px !important;
     }
-    
-    .bb-contact-hero-fw, .bb-about-hero-fw, .bb-programs-hero-fw, .bb-enroll-hero-fw {
+
+    .bb-contact-hero-fw,
+    .bb-about-hero-fw,
+    .bb-programs-hero-fw,
+    .bb-enroll-hero-fw {
         padding: 80px 22px 60px !important;
     }
 }
