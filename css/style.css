@@ -1220,6 +1220,71 @@ body {
         width: 100%;
         box-sizing: border-box;
     }
+
+    /* Aggressive Spacing Refinements */
+    .bb-trust-wrap,
+    .bb-program-age-wrap,
+    .bb-safety-wrap,
+    .bb-test-wrap,
+    .bb-team-wrap,
+    .bb-faq-wrap,
+    .bb-enroll-cta-wrap,
+    .bb-care-wrap,
+    .bb-about2-wrap,
+    .bb-about-mission-wrap {
+        padding: 35px 20px;
+    }
+
+    .bb-trust-cta,
+    .bb-test-cta,
+    .bb-team-cta {
+        margin-top: 24px;
+        padding: 20px;
+    }
+
+    .bb-trust-grid,
+    .bb-program-age-grid,
+    .bb-safety-grid,
+    .bb-test-grid,
+    .bb-team-grid {
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .bb-trust-card,
+    .bb-age-card,
+    .bb-safety-card,
+    .bb-test-card,
+    .bb-team-card {
+        padding: 18px;
+    }
+
+    .bb-trust-wrap h2,
+    .bb-program-age-wrap h2,
+    .bb-safety-wrap h2,
+    .bb-test-wrap h2,
+    .bb-team-wrap h2,
+    .bb-enroll-cta-wrap h2,
+    .bb-faq-wrap h2 {
+        font-size: 30px;
+        margin-top: 14px;
+    }
+
+    .bb-program-age-image,
+    .bb-test-image,
+    .bb-trust-image {
+        margin-bottom: 22px;
+    }
+
+    .bb-program-age-image img,
+    .bb-test-image img,
+    .bb-trust-image img {
+        height: 320px;
+    }
+
+    .bb-footer {
+        padding: 40px 20px 30px;
+    }
 }
 
 /* 📱 iPad & Tablet Refinements (768px - 1024px) */
