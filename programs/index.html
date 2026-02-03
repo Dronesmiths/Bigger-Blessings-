@@ -16,6 +16,47 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://biggerblessings.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programs",
+        "item": "https://biggerblessings.com/programs/"
+      }]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Does Bigger Blessings accept childcare subsidies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we proudly accept CCRC, FCCHEN, and other local/state subsidy programs."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are meals provided?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide nutritious meals and snacks as part of our daily programs."
+        }
+      }]
+    }
+    </script>
 </head>
 
 <body>
@@ -26,7 +67,7 @@
         <div class="bbp-container">
             <div class="bbp-logo">
                 <a href="/" aria-label="Bigger Blessings Home">
-                    <img src="../images/logo.webp" alt="Bigger Blessings Preschool Logo">
+                    <img src="../images/logo.webp" alt="Bigger Blessings Preschool Logo" width="180" height="60">
                 </a>
             </div>
             <nav class="bbp-nav" aria-label="Main navigation">
@@ -68,7 +109,8 @@
         PROGRAMS HERO — BIGGER BLESSINGS
         ========================================= -->
         <section class="bb-programs-hero-fw" aria-label="Childcare and Preschool Programs">
-            <img class="bb-programs-hero-img" src="../images/programs-hero-classroom.webp" sizes="100vw"
+            <img class="bb-programs-hero-img" src="../images/programs-hero-classroom.webp" sizes="100vw" width="1600"
+                height="600"
                 alt="Bigger Blessings Childcare & Preschool Lancaster - Well-organized and professional preschool environment"
                 fetchpriority="high" decoding="async">
             <div class="bb-programs-hero-wrap">
@@ -96,7 +138,8 @@
             <div class="bb-program-age-wrap">
                 <div class="bb-program-age-image">
                     <img src="../images/preschool-classroom-environment.webp"
-                        alt="Preschool children learning and playing at Bigger Blessings Lancaster" loading="lazy">
+                        alt="Preschool children learning and playing at Bigger Blessings Lancaster" width="600"
+                        height="400" loading="lazy">
                 </div>
                 <div class="bb-program-age-kicker">PROGRAMS BY AGE</div>
                 <h2>Childcare & Preschool Programs by Age</h2>
@@ -220,7 +263,7 @@
                 <div class="bb-programs-diff-image">
                     <img src="../images/infant-care-program.webp"
                         alt="Nurturing care for infants and toddlers at Bigger Blessings Childcare Lancaster"
-                        loading="lazy">
+                        width="600" height="400" loading="lazy">
                 </div>
                 <div class="bb-programs-diff-content">
                     <div class="bb-programs-diff-kicker">WHAT SETS OUR PROGRAMS APART</div>
