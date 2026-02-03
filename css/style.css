@@ -79,6 +79,18 @@ body {
     aspect-ratio: 150 / 81;
 }
 
+@media(max-width: 900px) {
+    .bbp-logo img {
+        height: 48px !important;
+    }
+}
+
+@media(max-width: 700px) {
+    .bbp-logo img {
+        height: 40px !important;
+    }
+}
+
 /* Homepage One-Color Icons */
 .bb-trust-icon {
     background: #f0f7f6 !important;
@@ -253,9 +265,7 @@ body {
         display: none;
     }
 
-    .bbp-logo img {
-        max-height: 48px;
-    }
+    /* Logo rule moved to top for global consistency */
 }
 
 @media(max-width: 700px) {
@@ -3364,11 +3374,7 @@ body {
         height: 70px;
     }
 
-    .bbp-logo img {
-        max-height: 40px;
-        width: auto !important;
-        height: auto !important;
-    }
+    /* Logo rule moved to top for global consistency */
 
     /* Fix for grids */
     .bb-process-grid,
