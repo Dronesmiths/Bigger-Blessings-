@@ -3050,9 +3050,29 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.97)), url("../images/hero.webp") center / cover no-repeat;
     padding: 100px 22px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bb-enroll-hero-fw.is-dark {
+    background: url("../images/registration-process-steps.webp") center / cover no-repeat;
+}
+
+.bb-enroll-hero-overlay {
+    display: none;
+}
+
+.is-dark .bb-enroll-hero-overlay {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .bb-enroll-hero-wrap {
+    position: relative;
+    z-index: 2;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -3071,17 +3091,25 @@ body {
 }
 
 .bb-enroll-hero-wrap h1 {
-    font-size: 52px;
+    font-size: clamp(34px, 6vw, 54px);
     line-height: 1.1;
     color: var(--ink);
     margin-bottom: 24px;
 }
 
+.is-dark .bb-enroll-hero-wrap h1 {
+    color: #ffffff;
+}
+
 .bb-enroll-hero-wrap p {
-    font-size: 19px;
+    font-size: 20px;
     line-height: 1.8;
     color: var(--muted);
     margin-bottom: 34px;
+}
+
+.is-dark .bb-enroll-hero-wrap p {
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .bb-enroll-hero-btns {
