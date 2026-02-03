@@ -73,6 +73,7 @@ body {
 /* Logo */
 .bbp-logo img {
     max-height: 56px;
+    width: auto;
     display: block;
 }
 
