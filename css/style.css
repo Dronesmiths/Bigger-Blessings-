@@ -70,24 +70,26 @@ body {
     box-sizing: border-box;
 }
 
-/* Logo - Bulletproof Aspect Ratio */
+/* Logo - Bulletproof Aspect Ratio (Global) */
 .bbp-logo img {
     height: 56px !important;
-    width: auto !important;
+    width: 104px !important;
+    /* Computed from 150/81 ratio */
     display: block;
     object-fit: contain;
-    aspect-ratio: 150 / 81;
 }
 
 @media(max-width: 900px) {
     .bbp-logo img {
         height: 48px !important;
+        width: 89px !important;
     }
 }
 
 @media(max-width: 700px) {
     .bbp-logo img {
         height: 40px !important;
+        width: 74px !important;
     }
 }
 
@@ -2783,12 +2785,12 @@ body {
     z-index: 3;
     max-width: 1120px;
     margin: 0 auto;
-    padding: 120px 22px 110px;
+    padding: 140px 22px 110px;
 }
 
 .bb-contact-hero-kicker {
     display: inline-block;
-    padding: 6px 16px;
+    padding: 10px 18px;
     border-radius: 999px;
     font-size: 12px;
     font-weight: 800;
@@ -2825,120 +2827,265 @@ body {
     color: #47525e;
 }
 
-/* Section 2: Contact Info & Form Grid */
-.bb-contact-section {
+/* Section 2: Contact Split Section (Premium Standard) */
+.bb-contact2-fw {
     padding: 100px 0;
-    background: #fff;
+    background: #f8fbff;
+    overflow-x: hidden;
 }
 
-.bb-contact-grid {
+.bb-contact2-wrap {
     max-width: 1200px;
     margin: auto;
     padding: 0 22px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.bb-contact-info h2 {
-    font-size: 32px;
-    margin-bottom: 24px;
+@media(min-width: 1024px) {
+    .bb-contact2-wrap {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.bb-contact2-image {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.bb-contact2-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bb-contact2-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media(min-width: 768px) {
+    .bb-contact2-content {
+        padding: 60px;
+    }
+}
+
+.bb-contact2-kicker {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #f0f7f6;
     color: var(--teal);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
 }
 
-.bb-contact-info p {
+.bb-contact2-content h2 {
+    font-size: clamp(30px, 5vw, 42px);
+    margin-bottom: 20px;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+.bb-contact2-desc {
     font-size: 18px;
     line-height: 1.8;
     color: var(--muted);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-.bb-contact-method {
-    margin-bottom: 24px;
+/* Contact Cards Grid */
+.bb-contact2-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+@media(min-width: 600px) {
+    .bb-contact2-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.bb-contact2-card {
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    transition: transform 0.2s;
 }
 
-.bb-contact-method-icon {
-    width: 48px;
-    height: 48px;
-    background: #f0f7f6;
-    color: var(--teal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
+.bb-contact2-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--teal);
+    background: #fff;
+}
+
+.bb-contact2-icon {
+    font-size: 24px;
     flex-shrink: 0;
 }
 
-.bb-contact-method-text h4 {
+.bb-contact2-info h4 {
     margin: 0 0 4px;
     font-size: 16px;
     color: var(--ink);
 }
 
-.bb-contact-method-text p,
-.bb-contact-method-text a {
+.bb-contact2-info p,
+.bb-contact2-info a {
     margin: 0;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--muted);
     text-decoration: none;
+    line-height: 1.5;
 }
 
-.bb-contact-form-card {
+/* Licensing Callout */
+.bb-licensing-card {
+    background: #f0faf8;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+}
+
+.bb-licensing-card h4 {
+    margin: 0 0 6px;
+    color: var(--teal);
+    font-size: 16px;
+}
+
+.bb-licensing-card p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Section 3: Enrollment Inquiry Form */
+.bb-contact-form-fw {
+    padding: 100px 0;
     background: #fff;
-    border-radius: 30px;
+    overflow-x: hidden;
+}
+
+.bb-contact-form-wrap {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 22px;
+}
+
+.bb-form-wrapper {
+    background: #fff;
     padding: 40px;
-    box-shadow: var(--shadow);
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
     border: 1px solid #eee;
 }
 
-.bb-form-group {
-    margin-bottom: 20px;
+@media(min-width: 768px) {
+    .bb-form-wrapper {
+        padding: 60px;
+    }
 }
 
-.bb-form-group label {
+.bb-contact-form-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bb-contact-form-intro h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.bb-contact-form-intro p {
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.bb-form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media(min-width: 600px) {
+    .bb-form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.bb-form-full {
+    grid-column: 1 / -1;
+}
+
+.bb-form-item label {
     display: block;
-    font-size: 14px;
-    font-weight: 700;
     margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
     color: var(--ink);
 }
 
-.bb-form-group input,
-.bb-form-group select,
-.bb-form-group textarea {
+.bb-form-item input,
+.bb-form-item select,
+.bb-form-item textarea {
     width: 100%;
-    padding: 12px 16px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    padding: 14px 18px;
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    border-radius: 14px;
     font-family: inherit;
     font-size: 15px;
+    transition: all 0.2s;
+}
+
+.bb-form-item input:focus,
+.bb-form-item select:focus,
+.bb-form-item textarea:focus {
+    outline: none;
+    background: #fff;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 4px rgba(31, 122, 107, 0.1);
 }
 
 .bb-form-submit {
     width: 100%;
+    padding: 18px;
     background: var(--teal);
     color: #fff;
+    font-weight: 800;
     border: none;
-    padding: 16px;
-    font-weight: 700;
-    border-radius: 10px;
+    border-radius: 14px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.2s;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
 }
 
 .bb-form-submit:hover {
     background: var(--cta-primary-hover);
-}
-
-@media(max-width: 900px) {
-    .bb-contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(31, 122, 107, 0.2);
 }
 
 /* =========================================
@@ -3412,6 +3559,7 @@ body {
     .bb-about-hero-fw,
     .bb-programs-hero-fw,
     .bb-enroll-hero-fw {
-        padding: 40px 22px 30px !important;
+        padding: 90px 22px 50px !important;
+        /* Increased to clear 70px mobile header */
     }
 }
