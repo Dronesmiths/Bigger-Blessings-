@@ -2729,34 +2729,64 @@ body {
     margin-left: calc(50% - 50vw);
     background: linear-gradient(rgba(255, 255, 255, .92), rgba(255, 255, 255, .96)), url("../images/about-classroom.webp") center / cover no-repeat;
     font-family: 'Poppins', system-ui, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark Variant (Requested: White text on dark BG) */
+.bb-contact-hero-fw.is-dark {
+    background: url("../images/preschool-call-to-action.webp") center / cover no-repeat;
+}
+
+.bb-contact-hero-overlay {
+    display: none;
+}
+
+.is-dark .bb-contact-hero-overlay {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
 }
 
 .bb-contact-hero-wrap {
+    position: relative;
+    z-index: 2;
     max-width: 1200px;
     margin: auto;
     padding: 110px 22px;
     display: grid;
     grid-template-columns: 1.05fr .95fr;
     gap: 56px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .bb-contact-copy h1 {
-    font-size: 46px;
+    font-size: clamp(32px, 5vw, 48px);
     line-height: 1.1;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     color: var(--ink);
 }
 
+.is-dark .bb-contact-copy h1 {
+    color: #ffffff;
+}
+
 .bb-contact-copy p {
-    font-size: 17px;
-    line-height: 1.85;
+    font-size: 18px;
+    line-height: 1.8;
     color: var(--muted);
     max-width: 520px;
 }
 
+.is-dark .bb-contact-copy p,
+.is-dark .bb-contact-copy p strong {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .bb-contact-trust {
-    margin-top: 22px;
+    margin-top: 26px;
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
@@ -2765,19 +2795,28 @@ body {
     color: #47525e;
 }
 
+.is-dark .bb-contact-trust {
+    color: #ffffff;
+}
+
 .bb-contact-verify {
-    margin-top: 34px;
+    margin-top: 36px;
     background: #ffffff;
     border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 22px 24px;
-    box-shadow: 0 14px 34px rgba(0, 0, 0, .08);
+    border-radius: 20px;
+    padding: 26px;
+    box-shadow: var(--shadow);
     max-width: 520px;
 }
 
+.is-dark .bb-contact-verify {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+}
+
 .bb-contact-verify h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
+    font-size: 17px;
+    margin-bottom: 14px;
     color: var(--ink);
 }
 
