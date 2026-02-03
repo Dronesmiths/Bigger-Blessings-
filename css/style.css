@@ -74,9 +74,9 @@ body {
 .bbp-logo img {
     height: 56px !important;
     width: 104px !important;
-    /* Computed from 150/81 ratio */
     display: block;
     object-fit: contain;
+    aspect-ratio: 150 / 81 !important;
 }
 
 @media(max-width: 900px) {
@@ -1518,6 +1518,9 @@ body {
     font-family: 'Poppins', system-ui, sans-serif;
     overflow: hidden;
     box-sizing: border-box;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
 }
 
 .bb-about-hero-img {
@@ -2234,6 +2237,9 @@ body {
     font-family: 'Poppins', system-ui, sans-serif;
     overflow: hidden;
     box-sizing: border-box;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
 }
 
 .bb-programs-hero-img {
@@ -2761,6 +2767,9 @@ body {
     font-family: 'Poppins', system-ui, sans-serif;
     overflow: hidden;
     box-sizing: border-box;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
 }
 
 .bb-contact-hero-img {
