@@ -2741,21 +2741,14 @@ body {
    CONTACT PAGE COMPONENTS
    ========================================= */
 
-/* Contact Hero */
-/* Section 1: Cinematic Contact Hero */
+/* Section 1: Cinematic Contact Hero (Synced with About/Programs) */
 .bb-contact-hero-fw {
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    height: 50vh;
-    min-height: 400px;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+    font-family: 'Poppins', system-ui, sans-serif;
     overflow: hidden;
-    background: #000;
+    box-sizing: border-box;
 }
 
 .bb-contact-hero-img {
@@ -2765,27 +2758,61 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    opacity: 0.5;
 }
 
-.bb-contact-hero-overlay {
+.bb-contact-hero-fw::before {
+    content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .90), rgba(255, 255, 255, .96));
     z-index: 2;
 }
 
-.bb-contact-hero-content {
+.bb-contact-hero-wrap {
     position: relative;
     z-index: 3;
-    max-width: 800px;
-    padding: 0 22px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 120px 22px 110px;
 }
 
-.bb-contact-hero-content h1 {
-    font-size: clamp(36px, 6vw, 56px);
-    margin-bottom: 20px;
-    color: #fff;
+.bb-contact-hero-kicker {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    background: #eef3ff;
+    color: #2a3a46;
+    margin-bottom: 22px;
+}
+
+.bb-contact-hero-wrap h1 {
+    font-size: clamp(34px, 7vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -.03em;
+    margin: 0 0 18px;
+    color: var(--ink);
+    max-width: 900px;
+}
+
+.bb-contact-hero-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.bb-contact-hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #47525e;
 }
 
 /* Section 2: Contact Info & Form Grid */
