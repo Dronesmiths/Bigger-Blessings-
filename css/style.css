@@ -70,13 +70,13 @@ body {
     box-sizing: border-box;
 }
 
+/* Logo - Bulletproof Aspect Ratio */
 .bbp-logo img {
-    height: auto !important;
-    max-height: 56px;
+    height: 56px !important;
     width: auto !important;
-    aspect-ratio: 150/81;
     display: block;
     object-fit: contain;
+    aspect-ratio: 150 / 81;
 }
 
 /* Homepage One-Color Icons */
@@ -2742,13 +2742,19 @@ body {
    ========================================= */
 
 /* Contact Hero */
+/* Section 1: Cinematic Contact Hero */
 .bb-contact-hero-fw {
     width: 100vw;
     margin-left: calc(50% - 50vw);
+    height: 50vh;
+    min-height: 400px;
     position: relative;
-    font-family: 'Poppins', system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
     overflow: hidden;
-    box-sizing: border-box;
     background: #000;
 }
 
@@ -2759,121 +2765,142 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .bb-contact-hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
     z-index: 2;
 }
 
-.bb-contact-hero-wrap {
+.bb-contact-hero-content {
     position: relative;
     z-index: 3;
+    max-width: 800px;
+    padding: 0 22px;
+}
+
+.bb-contact-hero-content h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Section 2: Contact Info & Form Grid */
+.bb-contact-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.bb-contact-grid {
     max-width: 1200px;
     margin: auto;
-    padding: 110px 22px;
+    padding: 0 22px;
     display: grid;
-    grid-template-columns: 1.05fr .95fr;
-    gap: 56px;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
 }
 
-.bb-contact-copy h1 {
-    font-size: clamp(32px, 5vw, 48px);
-    line-height: 1.1;
-    margin-bottom: 20px;
-    color: var(--ink);
+.bb-contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: var(--teal);
 }
 
-.is-dark .bb-contact-copy h1 {
-    color: #ffffff;
-}
-
-.bb-contact-copy p {
+.bb-contact-info p {
     font-size: 18px;
     line-height: 1.8;
     color: var(--muted);
-    max-width: 520px;
+    margin-bottom: 30px;
 }
 
-.is-dark .bb-contact-copy p,
-.is-dark .bb-contact-copy p strong {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.bb-contact-trust {
-    margin-top: 26px;
+.bb-contact-method {
+    margin-bottom: 24px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #47525e;
+    gap: 16px;
+    align-items: flex-start;
 }
 
-.is-dark .bb-contact-trust {
-    color: #ffffff;
+.bb-contact-method-icon {
+    width: 48px;
+    height: 48px;
+    background: #f0f7f6;
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    flex-shrink: 0;
 }
 
-.bb-contact-verify {
-    margin-top: 36px;
-    background: #ffffff;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 26px;
-    box-shadow: var(--shadow);
-    max-width: 520px;
-}
-
-.is-dark .bb-contact-verify {
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-}
-
-.bb-contact-verify h3 {
-    font-size: 17px;
-    margin-bottom: 14px;
+.bb-contact-method-text h4 {
+    margin: 0 0 4px;
+    font-size: 16px;
     color: var(--ink);
 }
 
-.bb-contact-verify a {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 15px;
-    color: var(--accent);
-    font-weight: 700;
+.bb-contact-method-text p,
+.bb-contact-method-text a {
+    margin: 0;
+    font-size: 16px;
+    color: var(--muted);
     text-decoration: none;
 }
 
-.bb-contact-verify a:hover {
-    text-decoration: underline;
+.bb-contact-form-card {
+    background: #fff;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border: 1px solid #eee;
 }
 
-.bb-contact-verify span {
+.bb-form-group {
+    margin-bottom: 20px;
+}
+
+.bb-form-group label {
     display: block;
     font-size: 14px;
-    color: #5f6b7a;
-    margin-top: 10px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
 }
 
-.bb-contact-form {
-    background: #ffffff;
-    border-radius: 28px;
-    padding: 36px;
-    box-shadow: 0 22px 52px rgba(0, 0, 0, .12);
+.bb-form-group input,
+.bb-form-group select,
+.bb-form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
 }
 
-@media(max-width:900px) {
-    .bb-contact-hero-wrap {
+.bb-form-submit {
+    width: 100%;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    padding: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.bb-form-submit:hover {
+    background: var(--cta-primary-hover);
+}
+
+@media(max-width: 900px) {
+    .bb-contact-grid {
         grid-template-columns: 1fr;
-        padding: 90px 22px;
-    }
-
-    .bb-contact-copy h1 {
-        font-size: 36px;
+        gap: 50px;
     }
 }
 
