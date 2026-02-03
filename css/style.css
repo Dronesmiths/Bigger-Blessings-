@@ -2588,11 +2588,11 @@ body {
 
 .bb-subsidy-card {
     margin-top: 64px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: 32px;
-    padding: 40px;
-    box-shadow: 0 22px 48px rgba(0, 0, 0, .12);
+    background: linear-gradient(135deg, #1f7a6b, #17665a);
+    padding: 50px;
+    border-radius: 34px;
+    color: #fff;
+    box-shadow: 0 20px 50px rgba(31, 122, 107, 0.2);
     max-width: 880px;
 }
 
@@ -2604,21 +2604,33 @@ body {
 }
 
 .bb-subsidy-card h3 {
-    font-size: 22px;
-    margin-bottom: 16px;
-    color: #1f2933;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
 .bb-subsidy-list {
     list-style: none;
     padding: 0;
-    margin: 0;
-    line-height: 1.9;
-    color: #5f6b7a;
+    margin: 24px 0;
 }
 
 .bb-subsidy-list li {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
     margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.bb-subsidy-note {
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ffffff !important;
+    opacity: 0.95;
+    font-weight: 500;
 }
 
 /* Programs Responsive Overrides */
@@ -3137,41 +3149,7 @@ body {
     color: var(--accent);
 }
 
-.bb-subsidy-card {
-    background: linear-gradient(135deg, #1f7a6b, #17665a);
-    padding: 50px;
-    border-radius: 34px;
-    color: #fff;
-    box-shadow: 0 20px 50px rgba(31, 122, 107, 0.2);
-}
-
-.bb-subsidy-card h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.bb-subsidy-list {
-    list-style: none;
-    padding: 0;
-    margin: 24px 0;
-}
-
-.bb-subsidy-list li {
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.bb-subsidy-note {
-    font-size: 14px;
-    opacity: 0.9;
-    font-style: italic;
-    line-height: 1.6;
-}
+/* Removed duplicate subsidy definitions - now consolidated above */
 
 @media(max-width: 900px) {
     .bb-enroll-hero-wrap h1 {
