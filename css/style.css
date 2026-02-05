@@ -317,7 +317,7 @@ body {
 
 @media(max-width: 768px) {
     .bb-hero-wrap {
-        padding: 80px 22px 60px;
+        padding: 40px 22px 60px;
         text-align: center;
     }
 
@@ -2802,6 +2802,13 @@ body {
     max-width: 1120px;
     margin: 0 auto;
     padding: 140px 22px 110px;
+}
+
+@media(max-width: 768px) {
+    .bb-contact-hero-wrap {
+        padding: 50px 22px 60px;
+        text-align: center;
+    }
 }
 
 .bb-contact-hero-kicker {
