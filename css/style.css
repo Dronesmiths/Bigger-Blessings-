@@ -4048,3 +4048,83 @@ body {
         padding: 10px 20px;
     }
 }
+
+/* =========================================
+   GRANT 5 Ws LAYOUT (NEW)
+   ========================================= */
+
+.bb-content-fw {
+    padding: 100px 0;
+    background: #fdfdfd;
+}
+
+.bb-content-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+.bb-content-wrap h2 {
+    font-size: 36px;
+    color: var(--ink);
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.bb-grant-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+@media(min-width: 900px) {
+    .bb-grant-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.bb-grant-detail-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 36px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+/* Make "Why" card full width on desktop if needed, currently 1 / -1 handles it */
+
+.bb-grant-icon {
+    font-size: 42px;
+    margin-bottom: 18px;
+    display: inline-block;
+    background: #f0fdf9;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb-grant-detail-card h3 {
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: var(--ink);
+}
+
+.bb-grant-detail-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0;
+}
+
+@media(max-width: 768px) {
+    .bb-grant-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bb-content-fw {
+        padding: 60px 0;
+    }
+}
