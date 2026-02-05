@@ -2187,7 +2187,7 @@ body {
 
 @media(max-width:768px) {
     .bb-about-hero-wrap {
-        padding: clamp(40px, 10vw, 80px) 22px;
+        padding: 40px 22px 60px;
     }
 
     .bb-about-hero-kicker {
@@ -2265,6 +2265,13 @@ body {
     max-width: 1120px;
     margin: 0 auto;
     padding: 120px 22px 110px;
+}
+
+@media(max-width: 768px) {
+    .bb-programs-hero-wrap {
+        padding: 50px 22px 60px;
+        text-align: center;
+    }
 }
 
 .bb-programs-hero-kicker {
