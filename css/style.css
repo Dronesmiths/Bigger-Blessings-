@@ -2760,6 +2760,7 @@ body {
    ========================================= */
 
 /* Section 1: Cinematic Contact Hero (Synced with About/Programs) */
+/* Section 1: Cinematic Contact Hero (Synced with About/Programs) */
 .bb-contact-hero-fw {
     width: 100vw;
     margin-left: calc(50% - 50vw);
@@ -2770,6 +2771,12 @@ body {
     min-height: 500px;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .bb-contact-hero-fw {
+        min-height: 350px;
+    }
 }
 
 .bb-contact-hero-img {
@@ -2856,6 +2863,8 @@ body {
 @media(min-width: 1024px) {
     .bb-contact2-wrap {
         grid-template-columns: 1fr 1fr;
+        align-items: start;
+        /* Prevent grid stretch */
     }
 }
 
@@ -2864,6 +2873,10 @@ body {
     border-radius: 40px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    /* Fix for vertical stretching */
+    align-self: start;
+    max-height: 600px;
+    width: 100%;
 }
 
 .bb-contact2-image img {
