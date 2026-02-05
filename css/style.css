@@ -318,7 +318,7 @@ body {
 @media(max-width: 768px) {
     .bb-hero-wrap {
         padding: 20px 22px 60px;
-        text-align: center;
+        /* text-align: left; Default */
     }
 
     .bb-hero-wrap h1 {
@@ -326,7 +326,7 @@ body {
     }
 
     .bb-hero-btns {
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
 
@@ -2242,6 +2242,13 @@ body {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .bb-programs-hero-fw {
+        min-height: 350px;
+        align-items: flex-start;
+    }
+}
+
 .bb-programs-hero-img {
     position: absolute;
     inset: 0;
@@ -2270,7 +2277,7 @@ body {
 @media(max-width: 768px) {
     .bb-programs-hero-wrap {
         padding: 20px 22px 60px;
-        text-align: center;
+        /* text-align: left; */
     }
 }
 
@@ -2710,7 +2717,7 @@ body {
 /* Programs Responsive Overrides */
 @media(max-width:768px) {
     .bb-programs-hero-wrap {
-        padding: 90px 22px 90px;
+        padding: 20px 22px 60px;
     }
 
     .bb-programs-hero-wrap h1 {
@@ -2814,7 +2821,7 @@ body {
 @media(max-width: 768px) {
     .bb-contact-hero-wrap {
         padding: 20px 22px 60px;
-        text-align: center;
+        /* text-align: left; */
     }
 }
 
