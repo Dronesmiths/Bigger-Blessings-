@@ -317,7 +317,7 @@ body {
 
 @media(max-width: 768px) {
     .bb-hero-wrap {
-        padding: 40px 22px 60px;
+        padding: 20px 22px 60px;
         text-align: center;
     }
 
@@ -2187,7 +2187,7 @@ body {
 
 @media(max-width:768px) {
     .bb-about-hero-wrap {
-        padding: 40px 22px 60px;
+        padding: 20px 22px 60px;
     }
 
     .bb-about-hero-kicker {
@@ -2269,7 +2269,7 @@ body {
 
 @media(max-width: 768px) {
     .bb-programs-hero-wrap {
-        padding: 50px 22px 60px;
+        padding: 20px 22px 60px;
         text-align: center;
     }
 }
@@ -2813,7 +2813,7 @@ body {
 
 @media(max-width: 768px) {
     .bb-contact-hero-wrap {
-        padding: 50px 22px 60px;
+        padding: 20px 22px 60px;
         text-align: center;
     }
 }
