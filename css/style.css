@@ -382,12 +382,146 @@ body {
     font-weight: 700;
 }
 
+/* About 2 (Why We Exist) - Refactored Layout */
+.bb-about2-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(60px, 8vw, 100px) 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.bb-about2-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media(min-width:900px) {
+    .bb-about2-intro {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+        gap: 60px;
+        align-items: center;
+    }
+}
+
+.bb-about2-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
+    box-shadow: 0 18px 46px rgba(0, 0, 0, .12);
+}
+
+.bb-about2-content {
+    /* No sidebar layout anymore */
+    text-align: left;
+}
+
+.bb-about2-kicker {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    background: #eef3ff;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.bb-about2-wrap h2 {
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: -.03em;
+    margin: 0 0 16px;
+    color: var(--ink);
+}
+
+.bb-about2-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.bb-about2-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 0;
+}
+
+@media(min-width:900px) {
+    .bb-about2-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.bb-about2-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+.bb-about2-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.bb-about2-card h3 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: var(--ink);
+}
+
+.bb-about2-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0;
+}
+
+.bb-about2-cta {
+    margin-top: 0;
+    border-radius: 34px;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.bb-about2-cta h4 {
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+.bb-about2-cta p {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 720px;
+}
+
+.bb-about2-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
 /* Trust Section */
 .bb-trust-fw {
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    background: radial-gradient(900px 420px at 12% 20%, rgba(223, 245, 236, .45), transparent 60%), radial-gradient(900px 420px at 88% 30%, rgba(255, 214, 232, .45), transparent 60%), linear-gradient(to bottom, #ffffff, #f7f9ff);
+    position: relative;
     font-family: 'Poppins', system-ui, sans-serif;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .bb-trust-wrap {
@@ -550,6 +684,99 @@ body {
 
 .bb-trust-links a:hover {
     text-decoration: underline;
+}
+
+/* =========================================
+   ABOUT US - MISSION (Full Width)
+   ========================================= */
+
+/* ... (Mission Styles) ... */
+
+/* =========================================
+   PROGRAMS COMPONENTS
+   ========================================= */
+
+/* Programs Diff (What Sets Us Apart) */
+.bb-programs-diff-fw {
+    width: 100%;
+    background: radial-gradient(900px 420px at 15% 25%, rgba(223, 245, 236, .45), transparent 60%), radial-gradient(900px 420px at 85% 30%, rgba(255, 214, 232, .45), transparent 60%), linear-gradient(to bottom, #ffffff, #f7f9ff);
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+.bb-programs-diff-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(60px, 8vw, 100px) 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.bb-programs-diff-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media(min-width:900px) {
+    .bb-programs-diff-intro {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+        gap: 60px;
+        align-items: center;
+    }
+}
+
+.bb-programs-diff-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.bb-programs-diff-content {
+    text-align: left;
+}
+
+.bb-programs-diff-kicker {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    background: #eef3ff;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.bb-programs-diff-wrap h2 {
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: -.03em;
+    margin: 0 0 16px;
+    color: var(--ink);
+}
+
+.bb-programs-diff-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.bb-programs-diff-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 0;
+}
+
+@media(min-width:900px) {
+    .bb-program-age-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* Programs Age */
