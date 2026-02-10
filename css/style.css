@@ -394,15 +394,24 @@ body {
     max-width: 1120px;
     margin: 0 auto;
     padding: clamp(60px, 8vw, 100px) 22px;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 48px;
-    align-items: center;
 }
 
-@media(min-width:768px) {
-    .bb-trust-wrap {
+/* Intro Row: Split Image + Text */
+.bb-trust-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media(min-width:900px) {
+    .bb-trust-intro {
+        display: grid;
         grid-template-columns: .9fr 1.1fr;
+        gap: 60px;
+        align-items: center;
     }
 }
 
@@ -3605,7 +3614,9 @@ body {
         padding: 90px 22px 50px !important;
         /* Increased to clear 70px mobile header */
     }
-}/* =========================================
+}
+
+/* =========================================
    ENROLLMENT HUB STYLES
    ========================================= */
 
@@ -3689,12 +3700,12 @@ body {
     text-decoration: none;
     color: var(--ink);
     transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .bb-hub-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
     border-color: var(--primary);
 }
 
@@ -3738,7 +3749,8 @@ body {
 }
 
 .bb-grants-kicker {
-    color: #10b981; /* Green for finance */
+    color: #10b981;
+    /* Green for finance */
     font-size: 13px;
     font-weight: 800;
     letter-spacing: .12em;
@@ -3816,7 +3828,8 @@ body {
     color: var(--muted);
     line-height: 1.6;
     margin-bottom: 24px;
-    min-height: 78px; /* Alignment fix */
+    min-height: 78px;
+    /* Alignment fix */
 }
 
 .bb-link-arrow {
@@ -3883,6 +3896,7 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+
     .bb-hub-grid,
     .bb-grants-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -3890,11 +3904,12 @@ body {
 }
 
 @media (max-width: 600px) {
+
     .bb-hub-grid,
     .bb-grants-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .bb-hub-intro h2,
     .bb-grants-intro h2 {
         font-size: 28px;
@@ -3943,13 +3958,13 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 32px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
     transition: transform .3s ease;
 }
 
 .bb-guide-step:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     border-color: var(--primary);
 }
 
@@ -4027,7 +4042,7 @@ body {
 .bb-provider-card .bb-license-big {
     font-size: 42px;
     font-weight: 800;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     padding: 10px 30px;
     border-radius: 12px;
     display: inline-block;
@@ -4042,7 +4057,7 @@ body {
         gap: 20px;
         padding: 30px;
     }
-    
+
     .bb-provider-card .bb-license-big {
         font-size: 28px;
         padding: 10px 20px;
@@ -4088,7 +4103,7 @@ body {
     border: 1px solid #eee;
     padding: 36px;
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 /* Make "Why" card full width on desktop if needed, currently 1 / -1 handles it */
@@ -4123,7 +4138,7 @@ body {
     .bb-grant-details-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .bb-content-fw {
         padding: 60px 0;
     }
